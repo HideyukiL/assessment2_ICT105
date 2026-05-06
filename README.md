@@ -15,7 +15,7 @@ The system uses a relational flat-file structure stored in the `/database` direc
 - `enrollments.txt`: Bridge table connecting classes (`CourseID, TeacherID, StudentID`).
 - `attendance.txt`: The transaction log (`Date, CourseID, StudentID, Status`).
 
-## 🛠️ Key Features (Developer A)
+## 🛠️ Key Features
 1. **Automated Registration**: Registers a student and automatically provisions a secure user login in one action.
 2. **Relational Class Filtering**: Ensures teachers only mark attendance for students actively enrolled in their specific courses.
 3. **Data Validation**: Rejects invalid inputs (e.g., trying to mark attendance with a status other than 'P' or 'A').
