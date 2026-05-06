@@ -1,0 +1,9 @@
+# Python cache files
+__pycache__/
+*.pyc
+
+# Mac system files (Prevents junk files if Paulo or Indah use Windows)
+.DS_Store
+
+# Database folder (Prevents the database from being uploaded to GitHub)
+database/
