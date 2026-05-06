@@ -1,6 +1,8 @@
 # assessment2_ICT105
 
-# School Attendance System - Backend Database Module - Lucas Hideyuki
+# School Attendance System
+
+##Backend Database Module - Lucas Hideyuki
 
 This module serves as the relational database engine for the Student Attendance System, built entirely using Python's standard library (no external dependencies) to meet project constraints.
 
