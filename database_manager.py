@@ -125,10 +125,9 @@ def verify_login(username, password, selected_role):
     Args:
         username (str): Input from UI.
         password (str): Input from UI.
-        selected_role (str): 'Teacher' or 'Student' from UI.
         
     Returns:
-        bool: True if match found, False otherwise.
+        tuple: (bool, str or None) -> (True, 'Teacher'), (True, 'Student'), or (False, None)
     """
     input_hash = hash_password(password)
     try:
@@ -138,9 +137,9 @@ def verify_login(username, password, selected_role):
                     #standardized split and strip to ensure match even with extra spaces
                     u, p_hash, r = [item.strip() for item in line.split(',')]
                     # Compare the hashes, not the plain text!
-                    if username == u and input_hash == p_hash and selected_role == r:
-                        return True
-        return False
+                    if username == u and input_hash == p_hash:
+                        return True, r
+        return False, None
     except Exception as e:
         print(f"Login error: {e}")
         return False
